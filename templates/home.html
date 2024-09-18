@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class = "box">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><h2>WELCOME TO Edu_guide</h2>
+    <div class="container">
+        <form action="add" method="post">
+                {% csrf_token %}
+                Enter First Name: <input type="text" name="first"><br><br>
+                Enter last Name: <input type="text" name="last"><br><br> 
+                <button type="submit">Submit </button>
+        </form>
+        </div>
+        
+        <style>
+        .container {
+        position: absolute;
+        height: 100vh;
+        }
+ 
+        form {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+        form1 {
+        position: absolute;
+        top: 60%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        }
+        h2{
+            text-align: center;
+        }
+        
+        </style>
+    </div>
+    {% endblock %}
+</body>
+</html>
